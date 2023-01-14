@@ -33,6 +33,15 @@ git clone https://github.com/goodvibrations32/diss.tn.filtering-wind.py.git ~/di
 
 echo
 echo ###################################################################
+echo ################## Build vanilla doom
+echo ###################################################################
+echo
+
+cd ~/
+~/.emacs.d/bin/doom sync
+
+echo
+echo ###################################################################
 echo ################## Setting up the files
 echo ###################################################################
 echo
@@ -44,6 +53,12 @@ cp -r .xmonad/ ~/
 cp -r .doom.d/ ~/
 cp -r Pictures/ ~/
 cp .bashrc ~/.bashrc
+
+echo
+echo ###################################################################
+echo ################## Build my configs doom with hope
+echo ###################################################################
+echo
 
 cd ~/
 ~/.emacs.d/bin/doom sync
