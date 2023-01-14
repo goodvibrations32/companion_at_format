@@ -19,6 +19,10 @@ sudo pacman -S --noconfirm --needed fd
 sudo pacman -S --noconfirm --needed gnuplot
 sudo pacman -S --noconfirm --needed xmobar
 
+sudo pacman -S --noconfirm --needed htop
+sudo pacman -S --noconfirm --needed thunar
+sudo pacman -S --noconfirm --needed vim
+
 #Install languages
 sudo pacman -S --noconfirm --needed python
 sudo pacman -S --noconfirm --needed pip
