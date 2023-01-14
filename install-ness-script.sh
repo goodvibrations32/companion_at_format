@@ -21,11 +21,24 @@ sudo pacman -S --noconfirm --needed xmobar
 
 #Install languages
 sudo pacman -S --noconfirm --needed python
+sudo pacman -S --noconfirm --needed pip
 sudo pacman -S --noconfirm --needed jupyter-notebook
+
+echo
+echo ###################################################################
+echo ################## Installing doom emacs, using the red pill
+echo ###################################################################
+echo
 
 # Making the doom magic with my setup
 git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.emacs.d
 ~/.emacs.d/bin/doom install
+
+echo
+echo ###################################################################
+echo ################## Making the config script executable and run
+echo ###################################################################
+echo
 
 # Make the next script executable and run it
 chmod +x my_configs_and_more.sh
