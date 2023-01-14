@@ -22,5 +22,5 @@ sudo pacman -S --noconfirm --needed xmobar
 
 # Making the doom magic with my setup
 
-git clone --depth 1 https://github.com/doomemacs ~/.emacs.d
+git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.emacs.d
 ~/.emacs.d/bin/doom install
