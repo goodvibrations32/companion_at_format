@@ -4,8 +4,8 @@
 mkdir ~/my-settings
 git clone --depth 1 https://gitlab.com/goodvibrations32/dtos_dot_experiment.git ~/my-settings
 cd ~/my-settings
-cp -r .config/ ~/.config
-cp -r .xmonad/ ~/.xmonad
-cp -r .doom.d/ ~/.doom.d
-cp -r Pictures/ ~/Pictures
+cp -r .config/ ~/
+cp -r .xmonad/ ~/
+cp -r .doom.d/ ~/
+cp -r Pictures/ ~/
 cp .bashrc ~/.bashrc
