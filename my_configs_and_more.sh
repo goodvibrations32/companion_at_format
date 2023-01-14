@@ -5,11 +5,12 @@ mkdir ~/my-settings
 git clone https://gitlab.com/goodvibrations32/dtos_dot_experiment.git ~/my-settings
 
 # Add dissertation doc and code projects
-mkdir ~/dissertation
+mkdir ~/dissertation/doc
 # Document in org mode
-git clone https://gitlab.com/goodvibrations32/org-docs.git ~/dissertation
+git clone https://gitlab.com/goodvibrations32/org-docs.git ~/dissertation/doc
 # Python code
-git clone https://github.com/goodvibrations32/diss.tn.filtering-wind.py.git ~/dissertation
+mkdir ~/dissertation/code
+git clone https://github.com/goodvibrations32/diss.tn.filtering-wind.py.git ~/dissertation/code
 
 cd ~/my-settings
 git checkout local
