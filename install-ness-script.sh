@@ -1,5 +1,11 @@
 #!/bin/bash
 
+echo
+echo "###################################################################"
+echo "################## Start an update and download the important stuff"
+echo "###################################################################"
+echo
+
 # Update the needed iso after clean install
 sudo pacman -Syyu --noconfirm --needed
 
@@ -27,11 +33,12 @@ sudo pacman -S --noconfirm --needed vim
 sudo pacman -S --noconfirm --needed python
 sudo pacman -S --noconfirm --needed pip
 sudo pacman -S --noconfirm --needed jupyter-notebook
+sudo pacman -S --noconfirm --needed texlive-bin
 
 echo
-echo ###################################################################
-echo ################## Installing doom emacs, using the red pill
-echo ###################################################################
+echo "###################################################################"
+echo "################## Installing doom emacs, using the red pill"
+echo "###################################################################"
 echo
 
 # Making the doom magic with my setup
@@ -39,9 +46,9 @@ git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.emacs.d
 ~/.emacs.d/bin/doom install
 
 echo
-echo ###################################################################
-echo ################## Making the config script executable and run
-echo ###################################################################
+echo "###################################################################"
+echo "################## Making the config script executable and run"
+echo "###################################################################"
 echo
 
 # Make the next script executable and run it
