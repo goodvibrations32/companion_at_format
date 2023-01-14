@@ -45,7 +45,7 @@ echo
 
 #Install languages
 sudo pacman -S --noconfirm --needed python
-sudo pacman -S --noconfirm --needed pyhton-pip
+sudo pacman -S --noconfirm --needed python-pip
 sudo pacman -S --noconfirm --needed jupyter-notebook
 sudo pacman -S --noconfirm --needed texlive-bin
 pip install numpy scipy signal matplotlib nptdms
