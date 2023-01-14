@@ -9,3 +9,8 @@ cp -r .xmonad/ ~/
 cp -r .doom.d/ ~/
 cp -r Pictures/ ~/
 cp .bashrc ~/.bashrc
+
+cd ~/
+
+.emacs.d/bin/doom sync
+/usr/bin/emacs --deamon
