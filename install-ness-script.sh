@@ -9,6 +9,12 @@ echo
 # Update the needed iso after clean install
 sudo pacman -Syyu --noconfirm --needed
 
+echo
+echo "###################################################################"
+echo "################## Download the important stuff"
+echo "###################################################################"
+echo
+
 # Download softwear and deps
 sudo pacman -S --noconfirm --needed alacritty
 sudo pacman -S --noconfirm --needed alacritty-themes
@@ -24,16 +30,25 @@ sudo pacman -S --noconfirm --needed ripgrep
 sudo pacman -S --noconfirm --needed fd
 sudo pacman -S --noconfirm --needed gnuplot
 sudo pacman -S --noconfirm --needed xmobar
+sudo pacman -S --noconfirm --needed gtk2
+sudo pacman -S --noconfirm --needed gtk3
 
 sudo pacman -S --noconfirm --needed htop
 sudo pacman -S --noconfirm --needed thunar
 sudo pacman -S --noconfirm --needed vim
 
+echo
+echo "###################################################################"
+echo "################## Coding languages and important libs"
+echo "###################################################################"
+echo
+
 #Install languages
 sudo pacman -S --noconfirm --needed python
-sudo pacman -S --noconfirm --needed pip
+sudo pacman -S --noconfirm --needed pyhton-pip
 sudo pacman -S --noconfirm --needed jupyter-notebook
 sudo pacman -S --noconfirm --needed texlive-bin
+pip install numpy scipy signal matplotlib nptdms
 
 echo
 echo "###################################################################"
