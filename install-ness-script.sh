@@ -18,9 +18,14 @@ sudo pacman -S --noconfirm --needed fd
 sudo pacman -S --noconfirm --needed gnuplot
 sudo pacman -S --noconfirm --needed xmobar
 
-# sudo pacman -S --noconfirm --needed
+#Install languages
+sudo pacman -S --noconfirm --needed python
+sudo pacman -S --noconfirm --needed jupyter
 
 # Making the doom magic with my setup
+# git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.emacs.d
+# ~/.emacs.d/bin/doom install
 
-git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.emacs.d
-~/.emacs.d/bin/doom install
+# Make the next script executable and run it
+chmod +x my_configs_and_more.sh
+./my_configs_and_more.sh
