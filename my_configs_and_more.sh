@@ -32,6 +32,16 @@ echo
 mkdir ~/dissertation/code
 git clone https://github.com/goodvibrations32/diss.tn.filtering-wind.py.git ~/dissertation/code
 
+
+echo
+echo "###################################################################"
+echo "################## The agenda for DOOM"
+echo "###################################################################"
+echo
+
+mkdir ~/org
+git clone https://github.com/goodvibrations32/agenda.git ~/org
+
 echo
 echo "###################################################################"
 echo "################## Build my configs doom with hope"
