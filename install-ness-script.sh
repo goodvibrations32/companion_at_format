@@ -57,7 +57,7 @@ sudo pacman -S --noconfirm --needed python
 sudo pacman -S --noconfirm --needed python-pip
 sudo pacman -S --noconfirm --needed jupyter-notebook
 sudo pacman -S --noconfirm --needed texlive-bin
-pip install numpy scipy matplotlib nptdms
+pip install numpy scipy matplotlib
 
 echo
 echo "###################################################################"
