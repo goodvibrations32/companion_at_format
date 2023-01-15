@@ -38,7 +38,7 @@ echo "###################################################################"
 echo
 
 cd ~/
-~/.emacs.d/bin/doom sync
+.emacs.d/bin/doom sync
 
 echo
 echo "###################################################################"
@@ -50,7 +50,7 @@ cd ~/my-settings
 git checkout local
 cp -r .config/ ~/
 cp -r .xmonad/ ~/
-cp -r .doom.d/ ~/
+cp -r .doom.d/ ~/.config/doom
 cp -r Pictures/ ~/
 cp .bashrc ~/.bashrc
 
@@ -61,5 +61,5 @@ echo "###################################################################"
 echo
 
 cd ~/
-~/.emacs.d/bin/doom sync
+.emacs.d/bin/doom sync
 # /usr/bin/emacs --deamon

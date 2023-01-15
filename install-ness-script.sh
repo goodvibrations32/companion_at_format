@@ -22,6 +22,7 @@ sudo pacman -S --noconfirm --needed nitrogen
 sudo pacman -S --noconfirm --needed rofi
 sudo pacman -S --noconfirm --needed discord
 sudo pacman -S --noconfirm --needed firefox
+sudo pacman -S --noconfirm --needed brave
 sudo pacman -S --noconfirm --needed signal-desktop
 sudo pacman -S --noconfirm --needed xmonad-contrib
 sudo pacman -S --noconfirm --needed xmonad
@@ -33,7 +34,15 @@ sudo pacman -S --noconfirm --needed xmobar
 sudo pacman -S --noconfirm --needed gtk2
 sudo pacman -S --noconfirm --needed gtk3
 
+sudo pacman -S --noconfirm --needed libreoffice-still
+sudo pacman -S --noconfirm --needed lxappearance
+sudo pacman -S --noconfirm --needed lxsession
+sudo pacman -S --noconfirm --needed pandoc
+sudo pacman -S --noconfirm --needed gimp
+
 sudo pacman -S --noconfirm --needed htop
+sudo pacman -S --noconfirm --needed starship
+sudo pacman -S --noconfirm --needed shell-color-scripts
 sudo pacman -S --noconfirm --needed thunar
 sudo pacman -S --noconfirm --needed vim
 
@@ -48,17 +57,18 @@ sudo pacman -S --noconfirm --needed python
 sudo pacman -S --noconfirm --needed python-pip
 sudo pacman -S --noconfirm --needed jupyter-notebook
 sudo pacman -S --noconfirm --needed texlive-bin
-pip install numpy scipy signal matplotlib nptdms
+pip install numpy scipy matplotlib nptdms
 
 echo
 echo "###################################################################"
-echo "################## Installing doom emacs, using the red pill"
+echo "################## Installing DTOS as a shortcut to my settings"
 echo "###################################################################"
 echo
 
 # Making the doom magic with my setup
-git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.emacs.d
-~/.emacs.d/bin/doom install
+git clone https://gitlab.com/dtos/dtos
+cd ~/dtos
+./dtos
 
 echo
 echo "###################################################################"
