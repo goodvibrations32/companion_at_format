@@ -63,3 +63,4 @@ echo
 cd ~/
 .emacs.d/bin/doom sync
 # /usr/bin/emacs --deamon
+exec reboot
