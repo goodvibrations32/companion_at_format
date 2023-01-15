@@ -10,16 +10,6 @@ echo
 cd ~/companion_at_format/dtos
 ./dtos
 
-echo
-echo "###################################################################"
-echo "################## Making the config script executable and run"
-echo "###################################################################"
-echo
-
-cd ..
-# Make the next script executable and run it
-chmod +x my_configs_and_more.sh
-./my_configs_and_more.sh
 
 echo
 echo "###################################################################"
