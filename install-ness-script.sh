@@ -61,13 +61,37 @@ pip install numpy scipy matplotlib
 
 echo
 echo "###################################################################"
-echo "################## Installing DTOS as a shortcut to my settings"
+echo "################## Cloning DTOS as a shortcut in companion_at_format"
+echo "###################################################################"
+echo
+git clone https://gitlab.com/dtos/dtos
+
+echo
+echo "###################################################################"
+echo "################## Installing doom"
+echo "###################################################################"
+echo
+# Making the doom magic with my setup
+git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.emacs.d
+~/.emacs.d/bin/doom install
+
+
+echo
+echo "###################################################################"
+echo "################## Change locale for dtos script"
 echo "###################################################################"
 echo
 
-# Making the doom magic with my setup
-git clone https://gitlab.com/dtos/dtos
-cd ~/dtos
+sudo localectl set-locale LC_CTYPE=en_US.UTF-8
+
+
+echo
+echo "###################################################################"
+echo "################## Run dtos script"
+echo "###################################################################"
+echo
+
+cd ~/companion_at_format/dtos
 ./dtos
 
 echo

@@ -50,7 +50,7 @@ cd ~/my-settings
 git checkout local
 cp -r .config/ ~/
 cp -r .xmonad/ ~/
-cp -r .doom.d/ ~/.config/doom
+cp -R .doom.d/* ~/.config/doom
 cp -r Pictures/ ~/
 cp .bashrc ~/.bashrc
 
