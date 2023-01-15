@@ -76,23 +76,37 @@ git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.emacs.d
 ~/.emacs.d/bin/doom install
 
 
+
+echo
+echo "###################################################################"
+echo "################## Getting the settings from gitlab"
+echo "###################################################################"
+echo
+
+#Add my repo to a folder in the new installation tree
+mkdir ~/my-settings
+git clone https://gitlab.com/goodvibrations32/dtos_dot_experiment.git ~/my-settings
+
 echo
 echo "###################################################################"
 echo "################## Change locale for dtos script"
 echo "###################################################################"
 echo
 
-sudo localectl set-locale LC_CTYPE=en_US.UTF-8
-
-
 echo
 echo "###################################################################"
-echo "################## Run dtos script"
+echo "################## Setting up the files"
 echo "###################################################################"
 echo
 
-cd ~/companion_at_format/dtos
-./dtos
+cd ~/my-settings
+git checkout local
+cp -r .config/ ~/
+cp -r .xmonad/ ~/
+cp -R .doom.d/* ~/.config/doom
+cp -r Pictures/ ~/
+cp .bashrc ~/.bashrc
+sudo cp ~/my-settings/locale.conf /etc/
 
 echo
 echo "###################################################################"
@@ -100,6 +114,13 @@ echo "################## Making the config script executable and run"
 echo "###################################################################"
 echo
 
+cd ..
 # Make the next script executable and run it
 chmod +x my_configs_and_more.sh
 ./my_configs_and_more.sh
+
+echo
+echo "###################################################################"
+echo "################## REBOOT"
+echo "###################################################################"
+echo
