@@ -17,7 +17,7 @@ echo
 
 # Download softwear and deps
 sudo pacman -S --noconfirm --needed alacritty
-sudo pacman -S --noconfirm --needed alacritty-themes
+sudo pacman -S --noconfirm --needed cmake
 sudo pacman -S --noconfirm --needed nitrogen
 sudo pacman -S --noconfirm --needed rofi
 sudo pacman -S --noconfirm --needed discord
@@ -114,10 +114,10 @@ echo "################## Making the config script executable and run"
 echo "###################################################################"
 echo
 
-cd ..
+cd ~/companion_at_format
 # Make the next script executable and run it
 chmod +x my_configs_and_more.sh
-./my_configs_and_more.sh
+# ./my_configs_and_more.sh
 
 echo
 echo "###################################################################"
