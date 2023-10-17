@@ -57,6 +57,8 @@ sudo pacman -S --noconfirm --needed python
 sudo pacman -S --noconfirm --needed python-pip
 sudo pacman -S --noconfirm --needed jupyter-notebook
 sudo pacman -S --noconfirm --needed texlive-bin
+sudo pacman -S --noconfirm --needed zig zls
+sudo pacman -S --noconfirm --needed rustup rust-analyzer
 pip install numpy scipy matplotlib
 
 echo
