@@ -20,13 +20,20 @@ ext_mon=$(xrandr |
            grep --color=auto "HDMI" |
            awk '{if ($1 ~ "HDMI") print$1}' |
            awk 'NR==1{print$1}')
+
 inter_mon=$(xrandr |
                  grep --color=auto "eDP" |
                  awk '{if ($1 ~ "eDP") print$1}' |
                  awk 'NR==1{print$1}')
+
 resh=$(xrandr |
           grep --color=auto "1680" |
           awk ' {if ($1 ~ "1680") print$1}' |
+          awk 'NR==1{print$1}')
+
+resl=$(xrandr |
+          grep --color=auto "1360" |
+          awk ' {if ($1 ~ "1360") print$1}' |
           awk 'NR==1{print$1}')
 ires=$(xrandr |
           grep --color=auto "1680\|1920" |
@@ -44,7 +51,12 @@ while getopts "phiw" flag; do
             echo "${resh}"
             ;;
         w)
-            echo "Resolution unknown"
+            xrandr --output "${ext_mon}" --mode "${resl}" --above eDP-1-1 --primary
+            sleep 3
+            xmonad --restart
+            sleep 2
+            nitrogen --restore
+            echo "${resh}"
             ;;
         i)
             echo -e "${PURPLE}============================================="
@@ -62,7 +74,7 @@ while getopts "phiw" flag; do
             echo -e "${END_COLOR}"
             ;;
         h)
-            echo "Help: -p for crete home || -l for work"
+            echo -e "${BOLDRED}Help: -p for crete home || -l for work || -i for info on what we found"
             ;;
         \?)
             echo "Invalid flag given !!"
