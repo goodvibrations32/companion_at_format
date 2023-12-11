@@ -26,14 +26,14 @@ inter_mon=$(xrandr |
                  awk '{if ($1 ~ "eDP") print$1}' |
                  awk 'NR==1{print$1}')
 
-resh=$(xrandr |
+reshome_crete=$(xrandr |
           grep --color=auto "1680" |
           awk ' {if ($1 ~ "1680") print$1}' |
           awk 'NR==1{print$1}')
 
-resl=$(xrandr |
-          grep --color=auto "1360" |
-          awk ' {if ($1 ~ "1360") print$1}' |
+reslab=$(xrandr |
+          grep --color=auto "1680" |
+          awk ' {if ($1 ~ "1680" ) print$1}' |
           awk 'NR==1{print$1}')
 ires=$(xrandr |
           grep --color=auto "1680\|1920" |
@@ -43,20 +43,20 @@ ires=$(xrandr |
 while getopts "phiw" flag; do
     case $flag in
         p)
-            xrandr --output "${ext_mon}" --mode "${resh}" --left-of eDP-1-1 --primary
+            xrandr --output "${ext_mon}" --mode "${reshome_crete}" --left-of eDP-1-1 --primary
             sleep 3
             xmonad --restart
             sleep 2
             nitrogen --restore
-            echo "${resh}"
+            echo "${reshome_crete}"
             ;;
         w)
-            xrandr --output "${ext_mon}" --mode "${resl}" --above eDP-1-1 --primary
+            xrandr --output "${ext_mon}" --mode "${reslab}" --above eDP-1-1 --primary
             sleep 3
             xmonad --restart
             sleep 2
             nitrogen --restore
-            echo "${resh}"
+            echo "${reslab}"
             ;;
         i)
             echo -e "${PURPLE}============================================="
