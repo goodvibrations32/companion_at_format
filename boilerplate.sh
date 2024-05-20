@@ -1,5 +1,22 @@
 #!/usr/bin/bash
 #
+#     _                                 
+#    | |                                
+#    | |     ___  __ _  __ _  ___ _   _ 
+#    | |    / _ \/ _` |/ _` |/ __| | | |
+#    | |___|  __/ (_| | (_| | (__| |_| |
+#    |______\___|\__, |\__,_|\___|\__, |
+#                 __/ |            __/ |
+#                |___/            |___/ 
+#      __            __   __               
+#     / _|           \ \ / /               
+#    | |_ ___  _ __   \ V / ___  _ __ __ _ 
+#    |  _/ _ \| '__|   > < / _ \| '__/ _` |
+#    | || (_) | |     / . \ (_) | | | (_| |
+#    |_| \___/|_|    /_/ \_\___/|_|  \__, |
+#                                     __/ |
+#                                    |___/ 
+#
 # ==============================================================================
 # ============= !!!!! make the connection to monitors easy !!!!! ===============
 # ==============================================================================
@@ -21,17 +38,14 @@ ext_mon=$(xrandr |
            awk '{if ($1 ~ "HDMI") print$1}' |
            awk 'NR==1{print$1}')
 
-inter_mon=$(xrandr |
-                 grep --color=auto "eDP" |
-                 awk '{if ($1 ~ "eDP") print$1}' |
-                 awk 'NR==1{print$1}')
+inter_mon=$(xrandr | grep --color=auto "eDP" | awk '{if ($1 ~ "eDP") print$1}' | awk 'NR==1{print$1}')
 
 reshome_crete=$(xrandr |
           grep --color=auto "1680" |
           awk ' {if ($1 ~ "1680") print$1}' |
           awk 'NR==1{print$1}')
 
-reslab=$(xrandr |
+reschr=$(xrandr |
           grep --color=auto "1680" |
           awk ' {if ($1 ~ "1680" ) print$1}' |
           awk 'NR==1{print$1}')
@@ -51,12 +65,12 @@ while getopts "phiw" flag; do
             echo "${reshome_crete}"
             ;;
         w)
-            xrandr --output "${ext_mon}" --mode "${reslab}" --above eDP-1-1 --primary
+            xrandr --output "${ext_mon}" --mode "${reschr}" --above eDP-1-1 --primary
             sleep 3
             xmonad --restart
             sleep 2
             nitrogen --restore
-            echo "${reslab}"
+            echo "${reschr}"
             ;;
         i)
             echo -e "${PURPLE}============================================="
