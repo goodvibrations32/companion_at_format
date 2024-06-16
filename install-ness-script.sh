@@ -87,7 +87,7 @@ echo
 
 #Add my repo to a folder in the new installation tree
 mkdir ~/my-settings
-git clone https://gitlab.com/goodvibrations32/dtos_dot_experiment.git ~/my-settings
+git clone https://gitlab.com/goodvibrations32/dotfiles_bare.git ~/my-settings
 
 echo
 echo "###################################################################"
@@ -102,7 +102,6 @@ echo "###################################################################"
 echo
 
 cd ~/my-settings
-git checkout local
 cp -r .config/ ~/
 cp -r .xmonad/ ~/
 cp -R .doom.d/* ~/.config/doom
@@ -110,15 +109,15 @@ cp -r Pictures/ ~/
 cp .bashrc ~/.bashrc
 sudo cp ~/my-settings/locale.conf /etc/
 
-echo
-echo "###################################################################"
-echo "################## Making the config script executable and run"
-echo "###################################################################"
-echo
+# echo
+# echo "###################################################################"
+# echo "################## Making the config script executable and run"
+# echo "###################################################################"
+# echo
 
-cd ~/companion_at_format
+# cd ~/companion_at_format
 # Make the next script executable and run it
-chmod +x my_configs_and_more.sh
+# chmod +x my_configs_and_more.sh
 # ./my_configs_and_more.sh
 
 echo
